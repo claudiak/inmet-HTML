@@ -10,9 +10,7 @@
 		<title>PAGE TITLE</title>
 		<meta name="description" content="">
 		<meta name="author" content="Claudia">
-
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -22,7 +20,7 @@
 		<!-- ICONS WEATHER CORE -->
 		<link rel="stylesheet" href="css/weather-icons.css">
 		<link rel="stylesheet" href="css/weather-icons-wind.css">
-		
+
 		<!-- OpenLayers core CSS -->
 		<link rel="stylesheet" href="css/openlayers.css" type="text/css">
 		<!-- Custom styles -->
@@ -31,6 +29,7 @@
 	</head>
 
 	<body>
+		<a id="top"></a>
 		<section id="main-navigation">
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 				<a class="navbar-brand" href="index.html"><img src="img/logo_inmet.png" width="100px" /></a>
@@ -59,72 +58,236 @@
 				</div>
 			</nav>
 		</section>
-		<header class="py-3">
+		<header class="py-4">
 			<div class="container">
 				<h1>PAGE TITLE</h1>
-				<h2>Weather icons cheatsheet at <a href="http://erikflowers.github.io/weather-icons/">erikflowers.github.io/weather-icons/</a> <i class="wi wi-night-sleet"></i><i class="wi wi-day-sleet"></i></h2>
+				<h2>Weather icons cheatsheet at <a href="http://erikflowers.github.io/weather-icons/" target="_blank">HERE</a><i class="wi wi-night-sleet"></i><i class="wi wi-day-sleet"></i></h2>
 			</div>
 		</header>
 		<section id="hero">
-			<div id="weather" class="container">
-				<div id="search-city"></div>
+			<div id="weather" class="container py-4">
+				<div id="search-city">
+					input search city
+				</div>
 				<div id="forecast">
-					<div id="today" class="col-md-3"></div>
-					<div id="nextDays" class="col-md-6"></div>
-					<div id="meteogram" class="col-md-3"></div>
+					<div class="row">
+						<div class="today col-md-3 mb-3">
+							today
+						</div>
+						<div class="nextDays col-md-6 mb-3">
+							predictions
+						</div>
+						<div class="meteogram col-md-3 mb-3">
+							meteogram
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="main-content">
 			<div class="navigation"></div>
 			<div class="about">
-				<div class="row row-offcanvas row-offcanvas-left">
-					<div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
-						<div class="list-group">
-							<a href="#" class="list-group-item active">Link</a>
-							<a href="#" class="list-group-item">Link</a>
-							<a href="#" class="list-group-item">Link</a>
-						</div>
-					</div><!--/span-->
-					<div class="col-12 col-md-9">
-						<p class="float-left">
-							<button type="button" class="btn btn-primary btn-sm d-none d-sm-block d-md-none" data-toggle="offcanvas">
-								<i class="fa fa-bars"></i>
-							</button>
-						</p>
-						<div class="jumbotron">
-							<h1>Hello, world!</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue mi mattis, tincidunt dolor in, aliquam quam. Suspendisse odio dolor, faucibus a facilisis in, aliquam sed sem. In lacinia,</p>
-						</div>
-					</div><!--/span-->
-				</div><!--/row-->
+				<div class="container-fluid">
+					<div class="row row-offcanvas row-offcanvas-left my-4">
+						<div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+							<div class="list-group">
+								<a href="#" class="list-group-item active">Link</a>
+								<a href="#" class="list-group-item">Link</a>
+								<a href="#" class="list-group-item">Link</a>
+							</div>
+						</div><!--/span-->
+						<div class="col-12 col-md-9">
+							<p class="float-left hidden-md-up">
+								<button type="button" class="btn btn-primary btn-sm d-sm-block d-md-none" data-toggle="offcanvas">
+									<i class="fa fa-bars"></i>
+								</button>
+							</p>
+							<div class="jumbotron">
+								<h1>Hello, world!</h1>
+								<p>
+									This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.
+								</p>
+							</div>
+							<div class="row">
+								<div class="col-6 col-lg-4">
+									<h2>Heading</h2>
+									<p>
+										Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+									</p>
+									<p>
+										<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+									</p>
+								</div><!--/span-->
+								<div class="col-6 col-lg-4">
+									<h2>Heading</h2>
+									<p>
+										Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+									</p>
+									<p>
+										<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+									</p>
+								</div><!--/span-->
+							</div><!--/row-->
+						</div><!--/span-->
+					</div><!--/row-->
+				</div>
 			</div>
 			<div id="graphics">
-				<div class="sidebar"></div>
-				<div class="graphics"></div>
+				<div class="container-fluid">
+					<div class="row row-offcanvas row-offcanvas-left py-2">
+						<div class="sidebar col-md-3 pt-3 sidebar-offcanvas" id="sidebar">
+							<!-- starts FORMS-->
+							sidebar forms
+							<!-- end FORMS-->
+						</div><!-- end SIDEBAR-->
+						<div class="graphics col-md-9">
+							<!-- TOGGLE BUTTON-->
+							<p class="float-left hidden-md-up">
+								<div class="row">
+									<button type="button" class="btn btn-primary btn-sm d-sm-block d-md-none" data-toggle="offcanvas">
+										<i class="fa fa-bars"></i>
+									</button>
+								</div>
+							</p>
+							<!-- ends TOGGLE BUTTON-->
+							<!-- starts CONTENT-->
+							Content
+						</div><!-- end CLASS GRAPHICS-->
+					</div>
+				</div>
+			</div>
 			</div>
 			<div id="maps">
-				<div class="sidebar"></div>
-				<div id="map">
-					<div class="legend"></div>
-					<div class="caption"></div>
+				<div class="container">
+					<div id="mapmobile" class="d-lg-none">
+						<div class="legend row ">
+							<div class="col" style="background-color: yellow">
+								1
+							</div>
+							<div class="col" style="background-color: orange">
+								2
+							</div>
+							<div class="col" style="background-color: red">
+								3
+							</div>
+							<div class="col" style="background-color: deeppink">
+								4
+							</div>
+							<div class="col" style="background-color: pink">
+								5
+							</div>
+							<div class="col" style="background-color: plum">
+								6
+							</div>
+							<div class="col" style="background-color: MediumOrchid">
+								7
+							</div>
+							<div class="col" style="background-color: PeachPuff">
+								8
+							</div>
+							<div class="col" style="background-color: blue">
+								9
+							</div>
+							<div class="col" style="background-color: seagreen">
+								10
+							</div>
+							<div class="col" style="background-color: MediumSpringGreen">
+								11
+							</div>
+							<div class="col" style="background-color: tan">
+								12
+							</div>
+						</div>
+						<div class="caption mt-5 ml-4">
+							<span><i class="fa fa-cloud"></i>INMET MOBILE</span>
+							<br>
+							Modelo Cosmo 7x7 km
+							<br>
+							Precipitação Acumulada em 24h
+							<br>
+							Inicialização (i) 00:00 UTC 12/01/2018
+							<br>
+							Validade 00:00 UTC (i+24h)
+							<br>
+						</div>
+					</div>
+				</div>
+				<div id="map" class="d-none d-lg-block">
+					<div class="legend row ">
+						<div class="col" style="background-color: yellow">
+							1
+						</div>
+						<div class="col" style="background-color: orange">
+							2
+						</div>
+						<div class="col" style="background-color: red">
+							3
+						</div>
+						<div class="col" style="background-color: deeppink">
+							4
+						</div>
+						<div class="col" style="background-color: pink">
+							5
+						</div>
+						<div class="col" style="background-color: plum">
+							6
+						</div>
+						<div class="col" style="background-color: MediumOrchid">
+							7
+						</div>
+						<div class="col" style="background-color: PeachPuff">
+							8
+						</div>
+						<div class="col" style="background-color: blue">
+							9
+						</div>
+						<div class="col" style="background-color: seagreen">
+							10
+						</div>
+						<div class="col" style="background-color: MediumSpringGreen">
+							11
+						</div>
+						<div class="col" style="background-color: tan">
+							12
+						</div>
+					</div>
+					<div class="caption mt-5 ml-4">
+						<span><i class="fa fa-cloud"></i>INMET FULL SCREEN</span>
+						<br>
+						Modelo Cosmo 7x7 km
+						<br>
+						Precipitação Acumulada em 24h
+						<br>
+						Inicialização (i) 00:00 UTC 12/01/2018
+						<br>
+						Validade 00:00 UTC (i+24h)
+						<br>
+					</div>
 				</div>
 			</div>
 			<div id="files"></div>
 			<div id="tables"></div>
 			<div id="news">
 				<div class="container">
-					<div class="col-6 col-sm-12"></div>
-					<div class="col-6 col-sm-12"></div>
-					<div class="col-6 col-sm-12"></div>
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"></div>
 				</div>
 			</div>
 		</section>
 		<section id="contact"></section>
-		<footer>
-			<div class="backtotop"></div>
-			<div class="navigation"></div>
-			<div class="copyright"></div>
+		<footer class="py-2">
+			<div class="backtotop my-2">
+				<a href="#top"><i class="fa fa-chevron-up"></i>
+				<br>
+				TOP </a>
+			</div>
+			<div class="navigation my-2">
+				Menu | Menu | Menu | Menu
+			</div>
+			<div class="copyright my-2">
+				<a href="www.claudiakich.com.br/en" target="_blank">@2018 Cláudia Kich</a>
+			</div>
 		</footer>
 
 		<!-- Bootstrap core JavaScript
@@ -148,6 +311,16 @@
 		<script type="text/javascript">
 			var map = new ol.Map({
 				target : 'map',
+				layers : [new ol.layer.Tile({
+					source : new ol.source.OSM()
+				})],
+				view : new ol.View({
+					center : ol.proj.fromLonLat([-48.0778487, -15.7751266]),
+					zoom : 9
+				})
+			});
+			var mapmobile = new ol.Map({
+				target : 'mapmobile',
 				layers : [new ol.layer.Tile({
 					source : new ol.source.OSM()
 				})],

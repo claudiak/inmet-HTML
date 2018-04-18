@@ -76,36 +76,39 @@ header{
   }
 }
 // HERO  
-#weather{
-  background: @darkblue;
-  .input-group{
-    margin-bottom: @body*2;
-    input{background: transparent;}
-    ::-webkit-input-placeholder {color: white;}
-     :-moz-placeholder { /* Firefox 18- */ color: white;}
-    ::-moz-placeholder {  /* Firefox 19+ */ color: white;}
-    :-ms-input-placeholder {color: white;}
-    .btn{font-size: @body*2}
-    .form-control{border: 0px;color: white;font-size: @body*2;}
-  .btn-primary{background: transparent;border: none;}
-  }
-  #forecast{
-    color: white;
-    h4{color: @gold;}
-    .today{
-      .wi {font-size: @body*4;}
+#hero{
+    background: @darkblue;
+  #weather{
+    .input-group{
+      margin-bottom: @body*2;
+      border: 1px solid rgba(255,255,255,.3);
+      input{background: transparent;}
+      ::-webkit-input-placeholder {color: white;}
+       :-moz-placeholder { /* Firefox 18- */ color: white;}
+      ::-moz-placeholder {  /* Firefox 19+ */ color: white;}
+      :-ms-input-placeholder {color: white;}
+      .btn{font-size: @body*2}
+      .form-control{border: 0px;color: white;font-size: @body*2;}
+    .btn-primary{background: transparent;border: none;}
     }
-    .nextDays{
-        h4{font-size: @body*1.5;}
-        .wi {font-size: @body*2;}
-        .col-4{
-          padding: 10px;
-          text-align: center;
-          background: rgba(0,0,0,0.1);
-          border: 1px solid @darkblue;
-        }
+    #forecast{
+      color: white;
+      h4{color: @gold;}
+      .today{
+        .wi {font-size: @body*4;}
+      }
+      .nextDays{
+          h4{font-size: @body*1.5;}
+          .wi {font-size: @body*2;}
+          .col-4{
+            padding: 10px;
+            text-align: center;
+            background: rgba(0,0,0,0.1);
+            border: 1px solid @darkblue;
+          }
+      }
+      .meteogram{background: rgba(0,0,0,0.1);}
     }
-    .meteogram{background: rgba(0,0,0,0.1);padding: 10px;}
   }
 }
 // main-content
@@ -140,7 +143,7 @@ header{
       }
     }
   }
-  #map{
+  #maps{
     position: relative;
     // LEGEND COLORFULL
     .legend {
@@ -170,11 +173,26 @@ header{
         }
     }
   }
+  #graphics{
+    background: @lightblue;
+          .active {border: none;}
+    .btn-primary{
+      background: transparent;
+      border: none;
+    }
+  }
 }
 
 // NEWS
 #news{
   background: @darkblue;
+  h1{color: @gold;}
+}
+// FOOTER
+footer{
+  text-align: center;
+  background: black;
+  color: white;
   h1{color: @gold;}
 }
 

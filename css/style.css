@@ -1,1 +1,218 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Sans);@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Teko);@font-face{font-family:Teko,sans-serif;src:url(https://fonts.googleapis.com/css?family=Fjalla+One|Teko)}a,article,aside,b,blockquote,body,button,div,em,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,input,li,main,nav,ol,section,span,strong,textarea,ul{font-family:'Droid Sans',sans-serif}#main-navigation li{margin-left:13px}#main-navigation li a{font-family:Teko,sans-serif;color:#fff;text-transform:uppercase;font-size:19.5px;letter-spacing:1px;padding:13px}#main-navigation li a:hover{background:rgba(255,255,255,.8);color:#000;text-decoration:none}#main-navigation li a i{margin-right:13px}#main-navigation .active a{background:rgba(255,255,255,.4)}header{background:#00327c}header h1{text-transform:uppercase;color:#fce118;font-family:Teko,sans-serif;font-size:39px}header h2{color:#fff;font-size:19.5px}#weather{background:#00327c}#weather .input-group{margin-bottom:26px}#weather .input-group input{background:0 0}#weather .input-group ::-webkit-input-placeholder{color:#fff}#weather .input-group :-moz-placeholder{color:#fff}#weather .input-group ::-moz-placeholder{color:#fff}#weather .input-group :-ms-input-placeholder{color:#fff}#weather .input-group .btn{font-size:26px}#weather .input-group .form-control{border:0;color:#fff;font-size:26px}#weather .input-group .btn-primary{background:0 0;border:none}#weather #forecast{color:#fff}#weather #forecast h4{color:#fce118}#weather #forecast .today .wi{font-size:52px}#weather #forecast .nextDays h4{font-size:19.5px}#weather #forecast .nextDays .wi{font-size:26px}#weather #forecast .nextDays .col-4{padding:10px;text-align:center;background:rgba(0,0,0,.1);border:1px solid #00327c}#weather #forecast .meteogram{background:rgba(0,0,0,.1);padding:10px}#main-content .navbar{background:#002862}#main-content .navbar .navbar-nav a{color:#597398}#main-content .navbar .navbar-nav a:hover{background:0 0;color:#e2eeff;text-decoration:none}#main-content .navbar .navbar-nav span{font-size:19.5px;font-family:Teko,sans-serif;letter-spacing:1px}#main-content .navbar .navbar-nav .active{background:0 0;margin:0}#main-content .navbar .navbar-nav .active a{margin:0;color:#fff}#main-content .navbar .navbar-nav .active a:hover{color:#afcfff;background:0 0}#main-content #map{position:relative}#main-content #map .legend{position:absolute;top:0;left:15.6px;font-size:13px;font-weight:700;text-align:center;z-index:100;width:100%}#main-content #map .legend div{border-right:1px solid #fff}#main-content #map .caption{position:absolute;left:0;top:0;z-index:100;background:rgba(155,155,155,.7);padding:13px;font-size:13px}#main-content #map .caption span{font-weight:700;font-size:19.5px;color:#00327c}#main-content #map .caption span i{margin-right:13px}#news{background:#00327c}#news h1{color:#fce118}
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Teko');
+@font-face {
+  font-family: 'Teko', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Fjalla+One|Teko');
+}
+html,
+body,
+header,
+main,
+footer,
+section,
+article,
+aside,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+ul,
+ol,
+li,
+blockquote,
+strong,
+em,
+span,
+b,
+i,
+a,
+form,
+input,
+textarea,
+button {
+  font-family: 'Droid Sans', sans-serif;
+}
+#main-navigation li {
+  margin-left: 13px;
+}
+#main-navigation li a {
+  font-family: 'Teko', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 19.5px;
+  letter-spacing: 1px;
+  padding: 13px;
+}
+#main-navigation li a:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-decoration: none;
+}
+#main-navigation li a i {
+  margin-right: 13px;
+}
+#main-navigation .active a {
+  background: rgba(255, 255, 255, 0.4);
+}
+header {
+  background: #00327c;
+}
+header h1 {
+  text-transform: uppercase;
+  color: #fce118;
+  font-family: 'Teko', sans-serif;
+  font-size: 39px;
+}
+header h2 {
+  color: white;
+  font-size: 19.5px;
+}
+#hero {
+  background: #00327c;
+}
+#hero #weather .input-group {
+  margin-bottom: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#hero #weather .input-group input {
+  background: transparent;
+}
+#hero #weather .input-group ::-webkit-input-placeholder {
+  color: white;
+}
+#hero #weather .input-group :-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+}
+#hero #weather .input-group ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+#hero #weather .input-group :-ms-input-placeholder {
+  color: white;
+}
+#hero #weather .input-group .btn {
+  font-size: 26px;
+}
+#hero #weather .input-group .form-control {
+  border: 0px;
+  color: white;
+  font-size: 26px;
+}
+#hero #weather .input-group .btn-primary {
+  background: transparent;
+  border: none;
+}
+#hero #weather #forecast {
+  color: white;
+}
+#hero #weather #forecast h4 {
+  color: #fce118;
+}
+#hero #weather #forecast .today .wi {
+  font-size: 52px;
+}
+#hero #weather #forecast .nextDays h4 {
+  font-size: 19.5px;
+}
+#hero #weather #forecast .nextDays .wi {
+  font-size: 26px;
+}
+#hero #weather #forecast .nextDays .col-4 {
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #00327c;
+}
+#hero #weather #forecast .meteogram {
+  background: rgba(0, 0, 0, 0.1);
+}
+#main-content .navbar {
+  background: #002862;
+}
+#main-content .navbar .navbar-nav a {
+  color: #597398;
+}
+#main-content .navbar .navbar-nav a:hover {
+  background: none;
+  color: #e2eeff;
+  text-decoration: none;
+}
+#main-content .navbar .navbar-nav span {
+  font-size: 19.5px;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 1px;
+}
+#main-content .navbar .navbar-nav .active {
+  background: none;
+  margin: 0;
+}
+#main-content .navbar .navbar-nav .active a {
+  margin: 0;
+  color: white;
+}
+#main-content .navbar .navbar-nav .active a:hover {
+  color: #afcfff;
+  background: none;
+}
+#main-content #maps {
+  position: relative;
+}
+#main-content #maps .legend {
+  position: absolute;
+  top: 0;
+  left: 15.6px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+  width: 100%;
+}
+#main-content #maps .legend div {
+  border-right: 1px solid white;
+}
+#main-content #maps .caption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: rgba(155, 155, 155, 0.7);
+  padding: 13px;
+  font-size: 13px;
+}
+#main-content #maps .caption span {
+  font-weight: 700;
+  font-size: 19.5px;
+  color: #00327c;
+}
+#main-content #maps .caption span i {
+  margin-right: 13px;
+}
+#main-content #graphics {
+  background: #7fb2fe;
+}
+#main-content #graphics .active {
+  border: none;
+}
+#main-content #graphics .btn-primary {
+  background: transparent;
+  border: none;
+}
+#news {
+  background: #00327c;
+}
+#news h1 {
+  color: #fce118;
+}
+footer {
+  text-align: center;
+  background: black;
+  color: white;
+}
+footer h1 {
+  color: #fce118;
+}
