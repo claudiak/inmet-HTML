@@ -109,6 +109,7 @@ header h2 {
 }
 #hero #weather #forecast {
   color: white;
+  font-size: 13px;
 }
 #hero #weather #forecast h4 {
   color: #fce118;
@@ -129,7 +130,7 @@ header h2 {
   border: 1px solid #00327c;
 }
 #hero #weather #forecast .meteogram {
-  background: none;
+  background: ;
 }
 #main-content .navbar {
   background: #002862;
@@ -201,6 +202,9 @@ header h2 {
 #main-content #graphics .btn-primary {
   background: transparent;
   border: none;
+}
+#main-content #graphics .alert {
+  font-size: 13px;
 }
 #news {
   background: #00327c;
