@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
 
@@ -19,10 +19,10 @@
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-		<script src="https://code.highcharts.com/highcharts.js"></script>
-		<script src="https://code.highcharts.com/modules/windbarb.js"></script>
-		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="https://highcharts.github.io/pattern-fill/pattern-fill-v2.js"></script>
+		<script src="js/highcharts/highcharts.js"></script>
+		<script src="js/highcharts/windbarb.js"></script>
+		<script src="js/highcharts/exporting.js"></script>
+		<script src="js/highcharts/pattern-fill-v2.js"></script>
 		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	</head>
 
@@ -73,7 +73,12 @@
 				 *   drawn around them. The wind arrows are basically drawn north-south, then rotated
 				 *   as per the wind direction.
 				 */
-
+				Highcharts.setOptions({
+					lang : {
+						months : ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+						weekdays : ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+					}
+				});
 				function Meteogram(xml, container) {
 					// Parallel arrays for the chart data, these are populated as the XML/JSON file
 					// is loaded
@@ -175,7 +180,7 @@
 				 * Get the title based on the XML data
 				 */
 				Meteogram.prototype.getTitle = function() {
-					return 'Meteogram for ' + this.xml.querySelector('location name').textContent + ', ' + this.xml.querySelector('location country').textContent;
+					return 'Previsão para ' + this.xml.querySelector('location name').textContent + ', ' + this.xml.querySelector('location country').textContent;
 				};
 
 				/**
@@ -235,7 +240,7 @@
 
 						xAxis : [{// Bottom X axis
 							type : 'datetime',
-							tickInterval : 2 * 36e5, // two hours
+							tickInterval : 6 * 36e5, // two hours
 							minorTickInterval : 36e5, // one hour
 							tickLength : 0,
 							gridLineWidth : 1,
@@ -337,7 +342,7 @@
 						},
 
 						series : [{
-							name : 'Temperature',
+							name : 'Temperatura',
 							data : this.temperatures,
 							type : 'spline',
 							marker : {
@@ -355,7 +360,7 @@
 							color : '#FF3333',
 							negativeColor : '#48AFE8'
 						}, {
-							name : 'Precipitation',
+							name : 'Precipitação',
 							data : this.precipitationsError,
 							type : 'column',
 							color : 'url(#precipitation-error)',
@@ -380,7 +385,7 @@
 								}
 							}
 						}, {
-							name : 'Precipitation',
+							name : 'Precipitação',
 							data : this.precipitations,
 							type : 'column',
 							color : '#68CFE8',
@@ -404,7 +409,7 @@
 								valueSuffix : ' mm'
 							}
 						}, {
-							name : 'Air pressure',
+							name : 'Pressão do ar',
 							color : Highcharts.getOptions().colors[2],
 							data : this.pressures,
 							marker : {
@@ -417,7 +422,7 @@
 							dashStyle : 'shortdot',
 							yAxis : 2
 						}, {
-							name : 'Wind',
+							name : 'Vento',
 							type : 'windbarb',
 							id : 'windbarbs',
 							color : Highcharts.getOptions().colors[1],
@@ -453,7 +458,7 @@
 				};
 
 				Meteogram.prototype.error = function() {
-					$('#loading').html('<i class="fa fa-frown-o"></i> Failed loading data, please try again later');
+					$('#loading').html('<i class="fa fa-frown-o"></i> Falha ao baixar os dados, por favor tente novamente mais tarde.');
 				};
 
 				/**
@@ -555,7 +560,7 @@
 				var place,
 				    url;
 				if (!location.hash) {
-					place = 'United_States/Minnesota/Minneapolis';
+					place = 'Brasil/Distrito_Federal/Brasília/';
 					//place = 'France/Rhône-Alpes/Val_d\'Isère~2971074';
 					//place = 'Norway/Sogn_og_Fjordane/Vik/Målset';
 					//place = 'United_States/California/San_Francisco';
