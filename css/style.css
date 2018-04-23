@@ -58,6 +58,9 @@ button {
 #main-navigation .active a {
   background: rgba(255, 255, 255, 0.4);
 }
+#main-navigation .navbar-collapse {
+  padding: 13px;
+}
 header {
   background: #00327c;
 }
