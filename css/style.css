@@ -135,6 +135,9 @@ header h2 {
 #hero #weather #forecast .meteogram {
   background: ;
 }
+#main-content .bg-darkblue {
+  background: #00327c;
+}
 #main-content .navbar {
   background: #002862;
 }
@@ -208,6 +211,22 @@ header h2 {
 }
 #main-content #graphics .alert {
   font-size: 13px;
+}
+#main-content .about .list-group .list-group-item {
+  background: #597398;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+#main-content .about .list-group .list-group-item:hover {
+  color: #00327c;
+  background: #768dae;
+  border-right: 5px solid #fce118;
+}
+#main-content .about .list-group .active {
+  background: white;
+  color: black;
+  border-right: 5px solid #fce118;
 }
 #news {
   background: #00327c;
