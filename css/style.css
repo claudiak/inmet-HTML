@@ -133,7 +133,7 @@ header h2 {
   border: 1px solid #00327c;
 }
 #hero #weather #forecast .meteogram {
-  background: ;
+  background: white;
 }
 #main-content .bg-darkblue {
   background: #00327c;
@@ -198,6 +198,13 @@ header h2 {
 }
 #main-content #maps .caption span i {
   margin-right: 13px;
+}
+#main-content #maps .navbar-toggler {
+  position: absolute;
+  top: 0;
+  color: red;
+  z-index: 102;
+  background: red;
 }
 #main-content #graphics {
   background: #7fb2fe;

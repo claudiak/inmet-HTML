@@ -157,29 +157,34 @@
 			</div>
 		</section>
 		<section id="main-content">
-			<nav class="navbar navbar-expand-lg">
+			<!-- MENU MAPAS -->
+			<nav class="navbar navbar-expand-md navbar-dark">
 				<div class="container">
-					<!-- MENU SUSPENSO -->
-					<ul class="navbar-nav">
-						<li class="active pr-3">
-							<a href="tempo.html"><i class="mr-3 fa fa-home"></i><span class="uk-hidden-small">Tempo</span></a>
-						</li>
-						<li class="mx-3">
-							<a href="tempo-previsaoNum.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Previsão Numérica</span></a>
-						</li>
-						<li class="mx-3">
-							<a href="tempo-satelite.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Imagens de satélite</span></a>
-						</li>
-						<li class="mx-3">
-							<a href="tempo-radar.html"><i class="mr-3 fa fa-umbrella"></i><span class="uk-hidden-small">Precipitação</span></a>
-						</li>
-						<li class="mx-3">
-							<a href="tempo-estacoes.html" title="Satélite"><i class="mr-3 fa fa-database"></i><span class="uk-hidden-small">Estações</span></a>
-						</li>
-						<li class="mx-3">
-							<a href="#" title="Temperatura"><i class="mr-3 fa fa-thermometer"></i><span class="uk-hidden-small">Temperaturas</span></a>
-						</li>
-					</ul>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseMaps" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						+ MAPAS
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapseMaps">
+						<ul class="navbar-nav">
+							<li class="active">
+								<a href="tempo.html"><i class="mr-3 fa fa-home"></i><span class="uk-hidden-small">Tempo</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-previsaoNum.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Previsão Numérica</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-satelite.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Imagens de satélite</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-radar.html"><i class="mr-3 fa fa-umbrella"></i><span class="uk-hidden-small">Precipitação</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-estacoes.html" title="Satélite"><i class="mr-3 fa fa-database"></i><span class="uk-hidden-small">Estações</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="#" title="Temperatura"><i class="mr-3 fa fa-thermometer"></i><span class="uk-hidden-small">Temperaturas</span></a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</nav>
 			<div id="maps">
@@ -482,7 +487,7 @@
 								marginRight : 40,
 								marginTop : 50,
 								plotBorderWidth : 1,
-								height : 210,
+								height : 190,
 								alignTicks : false,
 								scrollablePlotArea : {
 									minWidth : 720
@@ -510,7 +515,7 @@
 							},
 
 							credits : {
-								text : 'Forecast from <a href="http://yr.no">yr.no</a>',
+								text : 'Previsão oficial do INMET',
 								href : this.xml.querySelector('credit link').getAttribute('url'),
 								position : {
 									x : -40

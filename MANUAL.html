@@ -84,6 +84,90 @@
 			</div>
 		</section>
 		<section id="main-content">
+			<!-- MENU MAPAS -->
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseMaps" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						+ MAPAS
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapseMaps">
+						<ul class="navbar-nav">
+							<li class="active">
+								<a href="tempo.html"><i class="mr-3 fa fa-home"></i><span class="uk-hidden-small">Tempo</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-previsaoNum.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Previsão Numérica</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-satelite.html"><i class="mr-3 fa fa-globe"></i><span class="uk-hidden-small">Imagens de satélite</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-radar.html"><i class="mr-3 fa fa-umbrella"></i><span class="uk-hidden-small">Precipitação</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="tempo-estacoes.html" title="Satélite"><i class="mr-3 fa fa-database"></i><span class="uk-hidden-small">Estações</span></a>
+							</li>
+							<li class="mx-3">
+								<a href="#" title="Temperatura"><i class="mr-3 fa fa-thermometer"></i><span class="uk-hidden-small">Temperaturas</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div id="maps">
+				<div id="map">
+					<div class="legend row ">
+						<div class="col" style="background-color: yellow">
+							1
+						</div>
+						<div class="col" style="background-color: orange">
+							2
+						</div>
+						<div class="col" style="background-color: red">
+							3
+						</div>
+						<div class="col" style="background-color: deeppink">
+							4
+						</div>
+						<div class="col" style="background-color: pink">
+							5
+						</div>
+						<div class="col" style="background-color: plum">
+							6
+						</div>
+						<div class="col" style="background-color: MediumOrchid">
+							7
+						</div>
+						<div class="col" style="background-color: PeachPuff">
+							8
+						</div>
+						<div class="col" style="background-color: blue">
+							9
+						</div>
+						<div class="col" style="background-color: seagreen">
+							10
+						</div>
+						<div class="col" style="background-color: MediumSpringGreen">
+							11
+						</div>
+						<div class="col" style="background-color: tan">
+							12
+						</div>
+					</div>
+					<div class="caption mt-5 ml-4">
+						<span><i class="fa fa-cloud"></i>INMET</span>
+						<br>
+						Modelo Cosmo 7x7 km
+						<br>
+						Precipitação Acumulada em 24h
+						<br>
+						Inicialização (i) 00:00 UTC 12/01/2018
+						<br>
+						Validade 00:00 UTC (i+24h)
+						<br>
+					</div>
+				</div>
+			</div>
 			<div class="navigation"></div>
 			<div class="about">
 				<div class="container-fluid">
